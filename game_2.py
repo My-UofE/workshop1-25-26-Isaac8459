@@ -51,9 +51,9 @@ def play_game_2(min_x=0, max_x=20):
             game_ended = True
 
 def check_higher_lower(current_val, next_val, user_input):
-    if current_val<next_val and user_input == "h":
+    if current_val<next_val and user_input == 'h':
         return True
-    elif current_val>next_val and user_input == "l":
+    elif current_val>next_val and user_input == 'l':
         return True
     else:
         return False
