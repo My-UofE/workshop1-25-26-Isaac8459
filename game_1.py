@@ -13,7 +13,7 @@ def play_game_1(min_x=0, max_x=20):
     
     while game_ended == False:
         # select a guess at random
-        guess = pick_value(min_x, max_x)
+        guess = pick_value(poss_values)
         n += 1
         print()
         print(f"Guess #{n}:")
@@ -23,10 +23,8 @@ def play_game_1(min_x=0, max_x=20):
             game_ended = True
         elif result==2:
             poss_values = [ x for x in poss_values if x < guess ]
-            max_x = guess
         elif result==3:
             poss_values = [ x for x in poss_values if x > guess ]
-            min_x = guess
 
         if len(poss_values) == 0:
             print("I got confused... Let me try again.")
